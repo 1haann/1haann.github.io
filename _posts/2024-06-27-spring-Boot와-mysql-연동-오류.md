@@ -21,4 +21,3 @@ Spring Boot는 자동으로 Dialect를 인식하지만 경우에 따라 명시�
 
 **참고 블로그**  
 - [Spring Boot와 MySQL 연동 오류](https://velog.io/@jiwonblue/Spring-Boot%EC%99%80-MySQL-%EC%97%B0%EB%8F%99-%EC%98%A4%EB%A5%98)
-
