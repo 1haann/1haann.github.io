@@ -4,7 +4,7 @@ title: Spring Boot와 MySQL 연동 오류
 date: 2024-06-27 21:29 +0900
 description: "Caused by: org.hibernate.HibernateException"
 category:   [MySQL]
-tags:   [설정]
+tags:   [설정,이슈]
 pin: true
 ---
 
