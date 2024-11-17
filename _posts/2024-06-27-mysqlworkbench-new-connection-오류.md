@@ -11,49 +11,49 @@ pin: true
 > MySQL Workbench에서 새로운 커넥션을 만드는 과정 중 에러가 발생했다.  
 Access denied for user '유저아이디'@'localhost' (using password: yes)  
 
-![Failed to Connect to MySQL](../assets/img/myPostImages/connect_fail.png)  
+![Failed to Connect to MySQL](../assets/img/myPostImages/mysql/connect_fail.png)  
 
 **결론 : 구글링 하면서 이것저것 다 해봤는데 권한 문제였다.**  
 <br>
 
 **root 사용자로 접속 :** `mysql -u root -p`
-![mysql 로그인](../assets/img/myPostImages/sql_login.png)  
+![mysql 로그인](../assets/img/myPostImages/mysql/sql_login.png)  
 <br>
 
 **유저아이디 권한 확인 :** `SELECT host, user FROM mysql.user WHERE user = '유저아이디';`
-![권한 확인](../assets/img/myPostImages/host_qualification.png)  
+![권한 확인](../assets/img/myPostImages/mysql/host_qualification.png)  
 <br>
 
 **권한 부여 :** `GRANT ALL PRIVILEGES ON DB명.* TO '유저아이디'@'localhost' IDENTIFIED BY '비밀번호';`  
-![권한 부여](../assets/img/myPostImages/give_qualification.png)
-![Flush](../assets/img/myPostImages/flush.png)  
+![권한 부여](../assets/img/myPostImages/mysql/give_qualification.png)
+![Flush](../assets/img/myPostImages/mysql/flush.png)  
 **MySql 8.0 이후부터는 계정 생성과 권한 부여를 한 번에 할 수 없다고 한다. 위의 생성, 권한 과정을 분리해야 함**  
 <br>
 
 **root 계정 접속**
-![Workbench 메인](../assets/img/myPostImages/workbench_main.png)  
+![Workbench 메인](../assets/img/myPostImages/mysql/workbench_main.png)  
 <br>
 
 **Users and Privileges 탭으로 이동 후 Add account**
-![계정 생성](../assets/img/myPostImages/add_account.png)  
+![계정 생성](../assets/img/myPostImages/mysql/add_account.png)  
 <br>
 
 **유저아이디와 비밀번호 입력 후 Apply**
 <script src="https://gist.github.com/1haann/36e6c41429fa58d1973064bd8b2fab00.js"></script>
 
-![아이디,비밀번호 입력](../assets/img/myPostImages/add_account_input.png)  
+![아이디,비밀번호 입력](../assets/img/myPostImages/mysql/add_account_input.png)  
 <br>
 
 **생성 결과**
-![계정 생성 결과](../assets/img/myPostImages/add_account_result.png)  
+![계정 생성 결과](../assets/img/myPostImages/mysql/add_account_result.png)  
 <br>
 
 **메인 화면 Setup New Connection**
-![New Connection](../assets/img/myPostImages/new_connection.png)  
+![New Connection](../assets/img/myPostImages/mysql/new_connection.png)  
 <br>
 
 **성공 화면**
-![성공 화면](../assets/img/myPostImages/success.png)  
+![성공 화면](../assets/img/myPostImages/mysql/success.png)  
 <br>
 
 ---
